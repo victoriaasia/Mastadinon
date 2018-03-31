@@ -17,16 +17,20 @@
       <a href="#" class="m-logo-woman"><img src="img/logo-woman.png" alt=""></a>
     </header>
 
+  <form method="POST" id="question-form">
+
     <div id="m-slides">
       <div id="m-slider" class="js-slider">
 
-        <div class="m-slide" id="slide-#{i}">
 
-          <div class="m-main-slide">
-            <div id="mainSlideContainer">
 
-              <div class="m-main-slide__people js-people"></div>
-              <div class="m-main-slide__woman js-woman"></div>
+        <div class="m-slide m-intro" id="slide-#{i}">
+
+          <div class="m-intro-slide">
+            <div id="introContainer">
+
+              <div class="m-intro-slide__people js-people"></div>
+              <div class="m-intro-slide__woman js-woman"></div>
 
               <div class="m-text">
                 <h2 class="m-text__title">Кто вы <br/>
@@ -47,62 +51,87 @@
 
         </div>
 
-        <div class="m-slide m-test m-test-first" id="slide-#{i}">
-          <div class="m-test__form">
-            <div class="label">2</div>
-            <input type="button" value="ok" class="down">
-          </div>
-        </div>
+          <div class="m-slide m-test m-test-first" id="slide-#{i}">
+            <div class="m-test__question m-question">
+              <div class="m-question__number">1/7</div>
+              <h3 class="m-question__title">Сколько сладостей в день вы съедаете во время ПМС?</h3>
 
-        <div class="m-slide m-test m-test-second" id="slide-#{i}">
-          <div class="m-test__form">
-            <div class="label">3</div>
-            <input type="button" value="ok" class="down">
+              <div class="m-question__inner">
+
+                <div class="m-question__img"><img src="img/test1img.jpg" alt="" class="m-img"></div>
+
+                <div class="m-question__answers">
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-1" class="m-answer js-button"/>
+                    <label for="answer-1" class="m-answer-btn"><span>0-20%</span></label>
+                  </div>
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-2" class="m-answer js-button"/>
+                    <label for="answer-2" class="m-answer-btn"><span>60-70%</span></label>
+                  </div>
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-3" class="m-answer js-button"/>
+                    <label for="answer-3" class="m-answer-btn"><span>30-50%</span></label>
+                  </div>
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-4" class="m-answer js-button"/>
+                    <label for="answer-4" class="m-answer-btn"><span>80-100%</span></label>
+                  </div>
+
+                  <div class="m-question__btn"><input type="button" value="Далее" class="m-btn down"></div>
+                </div>
+              </div>
+
+            </div>
           </div>
-        </div>
-        <div class="m-slide m-test m-test-third" id="slide-#{i}">
-          <div class="m-test__form">
-            <div class="label">3</div>
-            <input type="button" value="ok" class="down">
+
+          <div class="m-slide m-test m-test-second" id="slide-#{i}">
+            <div class="m-test__form">
+              <div class="label">3</div>
+              <input type="button" value="ok" class="down">
+            </div>
           </div>
-        </div>
-        <div class="m-slide m-test m-test-fourth" id="slide-#{i}">
-          <div class="m-test__form">
-            <div class="label">3</div>
-            <input type="button" value="ok" class="down">
+          <div class="m-slide m-test m-test-third" id="slide-#{i}">
+            <div class="m-test__form">
+              <div class="label">3</div>
+              <input type="button" value="ok" class="down">
+            </div>
           </div>
-        </div>
-        <div class="m-slide m-test m-test-fifth" id="slide-#{i}">
-          <div class="m-test__form">
-            <div class="label">3</div>
-            <input type="button" value="ok" class="down">
+          <div class="m-slide m-test m-test-fourth" id="slide-#{i}">
+            <div class="m-test__form">
+              <div class="label">3</div>
+              <input type="button" value="ok" class="down">
+            </div>
           </div>
-        </div>
-        <div class="m-slide m-test m-test-sixth" id="slide-#{i}">
-          <div class="m-test__form">
-            <div class="label">3</div>
-            <input type="button" value="ok" class="down">
+          <div class="m-slide m-test m-test-fifth" id="slide-#{i}">
+            <div class="m-test__form">
+              <div class="label">3</div>
+              <input type="button" value="ok" class="down">
+            </div>
           </div>
-        </div>
-        <div class="m-slide m-test m-test-seventh" id="slide-#{i}">
-          <div class="m-test__form">
-            <div class="label">3</div>
-            <input type="button" value="ok" class="down">
+          <div class="m-slide m-test m-test-sixth" id="slide-#{i}">
+            <div class="m-test__form">
+              <div class="label">3</div>
+              <input type="button" value="ok" class="down">
+            </div>
           </div>
-        </div>
+          <div class="m-slide m-test m-test-seventh" id="slide-#{i}">
+            <div class="m-test__form">
+              <div class="label">3</div>
+              <input type="button" value="ok" class="down">
+            </div>
+          </div>
+
+
+
       </div>
-      <!-- <div class="direction">
-        <div class="down">DOWN</div>
-        <div class="down">DOWN</div>
-        <div class="down">DOWN</div>
-      </div> -->
     </div>
+
+    </form>
 
 
 </div>
 
 <script src="js/script.js"></script>
-<script>new WOW().init();</script>
-
 </body>
 </html>

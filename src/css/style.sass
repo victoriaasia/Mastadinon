@@ -9,10 +9,14 @@
 @import "header"
 @import "icons"
 
-
+body
+	overflow-x: hidden
 
 *, *:before, *:after
 	box-sizing: border-box
+
+.m-img
+	max-width: 90%
 
 .m-wrapper
 	width: 100%
@@ -27,6 +31,7 @@
 	top: 105px
 	left: 0
 	width: 100%
+	min-width: 768px
 	height: calc(100% - 105px)
 	// +size(100%)
 	/* border: 1px solid red */
@@ -47,14 +52,19 @@
 	display: flex
 	align-items: center
 	justify-content: center
-	&__form
-		width: 60%
-		height: 50%
+	&__question
+		width: 790px
+		height: auto
 		min-height: 400px
 		background: $light
 		box-shadow: 11px 10px 11px -6px rgba($shadow,0.75)
+		position: relative
+		padding: 30px 45px 0
+		overflow: hidden
 	&-first
 		background: url("../img/test1.jpg") no-repeat
+		.m-answer-btn
+			white-space: nowrap
 	&-second
 		background: url("../img/test2.jpg") no-repeat
 	&-third
@@ -67,6 +77,94 @@
 		background: url("../img/test6.jpg") no-repeat
 	&-seventh
 		background: url("../img/test7.jpg") no-repeat
+
+
+.m-question
+	&__number
+		position: absolute
+		top: 0
+		left: 0
+		background: url('../img/numback.png') no-repeat
+		background-size: cover
+		width: 130px
+		height: 135px
+		font-size: 55px
+		font-family: "Georgia"
+		color: #fff
+		font-weight: bold
+		font-style: italic
+		padding: 20px
+	&__title
+		font-size: 28px
+		font-family: "mpb", Arial, sans-serif
+		color: $blue
+		font-weight: bold
+		text-transform: uppercase
+		font-size: 28px
+		text-align: left
+		padding: 0 30px 0 210px
+	&__inner
+		width: 100%
+		height: 100%
+		&::after
+			content: ""
+			display: table
+			clear: both
+	&__img, &__answers
+		float: left
+	&__img
+		width: 40%
+	&__answers
+		width: 60%
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: center
+		// align-items: center
+		padding: 20px 0
+	&__answer
+		flex: 1 1 40%
+		max-width: 45%
+		margin: 10px
+	&__btn
+		padding-top: 20px
+
+
+
+.m-answer
+	display: none
+	+ .m-answer-btn
+		width: 100%
+		height: 95px
+		padding: 10px
+		display: flex
+		justify-content: center
+		align-items: center
+		text-transform: uppercase
+		font-weight: 700
+		outline: none
+		position: relative
+		background: #fff
+		text-align: center
+		color: $darkpale
+		font-size: 32px
+		border: none
+		border-top-left-radius: 20px
+		border-top-right-radius: 20px
+		border-bottom-left-radius: 20px
+		border-bottom-right-radius: 20px
+		-webkit-transition: all 0.3s
+		-moz-transition: all 0.3s
+		transition: all 0.3s
+		cursor: pointer
+		&:hover
+			background: rgba(#fff, 0.5)
+.m-answer:checked + .m-answer-btn
+	background: $darkpale
+	color: #fff
+
+
+
 
 
 
@@ -82,7 +180,7 @@
 		background: green
 
 
-.m-main-slide
+.m-intro-slide
   width: 100%
   height: 100%
   background: url('../img/back.jpg')
@@ -109,7 +207,7 @@
 	  background-position: 60% 90% !important
 	  z-index: 0
 
-#mainSlideContainer
+#introContainer
   width: 100%
   max-width: 100%
   margin: 0 auto
@@ -152,30 +250,30 @@
   	  margin: 17px auto 35px
   	  z-index: 3
 
-  .m-btn
-    background: $yellow
-    padding: 10px 55px
-    outline: none
-    border: 0px
-    border-top-left-radius: 50px
-    border-top-right-radius: 50px
-    border-bottom-left-radius: 50px
-    border-bottom-right-radius: 50px
-    color: #fff
-    font-size: 27px
-    font-family: "mpb", Arial, sans-serif
-    text-transform: uppercase
-    cursor: pointer
+.m-btn
+  background: $yellow
+  padding: 10px 55px
+  outline: none
+  border: 0px
+  border-top-left-radius: 50px
+  border-top-right-radius: 50px
+  border-bottom-left-radius: 50px
+  border-bottom-right-radius: 50px
+  color: #fff
+  font-size: 27px
+  font-family: "mpb", Arial, sans-serif
+  text-transform: uppercase
+  cursor: pointer
 
 
 
 
 @media all and (max-width: 1200px)
-  #mainSlideContainer
+  #introContainer
     width: 100%
 
 @media all and (max-width: 980px)
-  #mainSlideContainer
+  #introContainer
     background-position: 50% 90%
 
   .m-text
