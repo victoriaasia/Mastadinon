@@ -1,0 +1,14 @@
+@mixin bp-desktop
+  @media screen and (min-width: 1440px)
+    @content
+
+@mixin bp-table
+  @media screen and (max-width: 980px)
+    @content
+
+@mixin bp-mob
+  @media screen and (max-width: 768px)
+    @content
+
+@mixin transition($args...)
+  transition: $args

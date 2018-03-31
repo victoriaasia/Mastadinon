@@ -1,0 +1,64 @@
+@font-face {
+	font-family: 'mpr';
+	src: url('fonts/mpr/mpr.eot');
+	src: url('fonts/mpr/mpr.eot?#iefix')format('embedded-opentype'),
+	url('fonts/mpr/mpr.woff') format('woff'), url('fonts/mpr/mpr.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'mpb';
+	src: url('fonts/mpb/mpb.eot');
+	src: url('fonts/mpb/mpb.eot?#iefix')format('embedded-opentype'),
+	url('fonts/mpb/mpb.woff') format('woff'), url('fonts/mpb/mpb.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'mpi';
+	src: url('fonts/mpi/mpi.eot');
+	src: url('fonts/mpi/mpi.eot?#iefix')format('embedded-opentype'),
+	url('fonts/mpi/mpi.woff') format('woff'), url('fonts/mpi/mpi.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'mpblack';
+	src: url('fonts/mpblack/mpblack.eot');
+	src: url('fonts/mpblack/mpblack.eot?#iefix')format('embedded-opentype'),
+	url('fonts/mpblack/mpblack.woff') format('woff'), url('fonts/mpblack/mpblack.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'kpblacki';
+	src: url('fonts/kpblacki/kpblacki.eot');
+	src: url('fonts/kpblacki/kpblacki.eot?#iefix')format('embedded-opentype'),
+	url('fonts/kpblacki/kpblacki.woff') format('woff'), url('fonts/kpblacki/kpblacki.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'kpbooki';
+	src: url('fonts/kpbooki/kpbooki.eot');
+	src: url('fonts/kpbooki/kpbooki.eot?#iefix')format('embedded-opentype'),
+	url('fonts/kpbooki/kpbooki.woff') format('woff'), url('fonts/kpbooki/kpbooki.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'mpext';
+	src: url('fonts/mpext/mpext.eot');
+	src: url('fonts/mpext/mpext.eot?#iefix')format('embedded-opentype'),
+	url('fonts/mpext/mpext.woff') format('woff'), url('fonts/mpext/mpext.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'mpexti';
+	src: url('fonts/mpexti/mpexti.eot');
+	src: url('fonts/mpexti/mpexti.eot?#iefix')format('embedded-opentype'),
+	url('fonts/mpexti/mpexti.woff') format('woff'), url('fonts/mpexti/mpexti.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
