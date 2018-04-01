@@ -44,7 +44,7 @@ gulp.task('img', function() {
 });
 
 gulp.task('js', function() {
-  return gulp.src(['src/js/jquery.min.js', 'src/js/modernizr.js', 'src/js/wow.min.js', 'src/js/script.js'])
+  return gulp.src(['src/js/jquery.min.js', 'src/js/modernizr.js', 'src/js/script.js'])
     .pipe(concat('script.js'))
     .pipe(gulp.dest('dest/js'))
 });

@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	app.init();
-	var blockAnswers = $(".down").parent();
-	blockAnswers.find(".m-answer").change(function () {$(".down").prop("disabled", false);});
+	// var blockAnswers = $(".m-down").parent();
+	// blockAnswers.find(".m-answer").change(function () {$(".m-down").prop("disabled", false);});
 });
 
 var app = app || {
@@ -13,7 +13,7 @@ var app = app || {
 	slide_to: function(num){
 		if (Modernizr.csstransforms){
 			var new_position = "-"+(num-1)*100+"%";
-			//Slide using css transforms
+
 			$(".js-slider")
 				.css("transform","translateY("+new_position+")")
 				.css("-webkit-transform","translateY("+new_position+")")
@@ -21,20 +21,16 @@ var app = app || {
 				.css("-ms-transform","translateY("+new_position+")")
 				.css("-o-transform","translateY("+new_position+")");
 			} else {
-				//Legacy support
-				$(".js-slider").css("top",-(num-1)*100+"%");
 
+				$(".js-slider").css("top",-(num-1)*100+"%");
 			}
 		app.current_slide = num;
 	},
 
 	slide_functions: function(){
 		var total_slides = 9;
+		$(".m-down").on("click", function(){
 
-		//Slide down
-		$(".down").on("click", function(){
-
-			//Check our limit
 			if (app.current_slide < total_slides){
 
 				app.current_slide++;
