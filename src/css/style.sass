@@ -25,6 +25,13 @@ body
 		outline: 0
 		text-decoration: none
 
+.m-wrapper ::-moz-selection
+  background: $darkpale
+  color: $light
+.m-wrapper ::selection
+  background: $darkpale
+  color: $light
+
 
 #m-slides
 	position: absolute
@@ -52,31 +59,66 @@ body
 	display: flex
 	align-items: center
 	justify-content: center
+	.m-img
+		position: absolute
+		max-width: 100%
+		width: 100%
+		height: 100%
 	&__question
 		width: 790px
 		height: auto
 		min-height: 400px
+		position: relative
 		background: $light
 		box-shadow: 11px 10px 11px -6px rgba($shadow,0.75)
 		position: relative
-		padding: 30px 45px 0
 		overflow: hidden
 	&-first
 		background: url("../img/test1.jpg") no-repeat
-		.m-answer-btn
+		.m-answer + .m-answer-btn
 			white-space: nowrap
+			text-transform: uppercase
+			font-size: 32px
+		&__img
+			background: url('../img/test1img.jpg') no-repeat
+			background-size: 220px
+			background-position: 10% 80%
 	&-second
 		background: url("../img/test2.jpg") no-repeat
+		&__img
+			background: url('../img/test2img.jpg') no-repeat
+			background-size: 275px
+			background-position: left bottom
 	&-third
 		background: url("../img/test3.jpg") no-repeat
+		&__img
+			background: url('../img/test3img.jpg') no-repeat
+			background-size: 230px
+			background-position: 10% 65%
 	&-fourth
 		background: url("../img/test4.jpg") no-repeat
+		&__img
+			background: url('../img/test4img.jpg') no-repeat
+			background-size: 170px
+			background-position: 15% 80%
 	&-fifth
 		background: url("../img/test5.jpg") no-repeat
+		&__img
+			background: url('../img/test5img.jpg') no-repeat
+			background-size: 200px
+			background-position: 10% 60%
 	&-sixth
 		background: url("../img/test6.jpg") no-repeat
+		&__img
+			background: url('../img/test6img.jpg') no-repeat
+			background-size: 230px
+			background-position: 10% 65%
 	&-seventh
 		background: url("../img/test7.jpg") no-repeat
+		&__img
+			background: url('../img/test7img.jpg') no-repeat
+			background-size: 245px
+			background-position: 7% 70%
 
 
 .m-question
@@ -93,27 +135,23 @@ body
 		color: #fff
 		font-weight: bold
 		font-style: italic
-		padding: 20px
+		padding: 30px 20px
 	&__title
 		font-size: 28px
 		font-family: "mpb", Arial, sans-serif
 		color: $blue
 		font-weight: bold
 		text-transform: uppercase
-		font-size: 28px
+		font-size: 27px
 		text-align: left
-		padding: 0 30px 0 210px
+		padding: 45px 45px 0 200px
 	&__inner
 		width: 100%
 		height: 100%
-		&::after
-			content: ""
-			display: table
-			clear: both
-	&__img, &__answers
-		float: left
-	&__img
-		width: 40%
+		display: flex
+		justify-content: flex-end
+		position: relative
+    z-index: 99
 	&__answers
 		width: 60%
 		display: flex
@@ -121,7 +159,7 @@ body
 		flex-wrap: wrap
 		justify-content: center
 		// align-items: center
-		padding: 20px 0
+		padding: 20px 45px 20px 0
 	&__answer
 		flex: 1 1 40%
 		max-width: 45%
@@ -136,18 +174,17 @@ body
 	+ .m-answer-btn
 		width: 100%
 		height: 95px
-		padding: 10px
+		padding: 10px 5px
 		display: flex
 		justify-content: center
 		align-items: center
-		text-transform: uppercase
 		font-weight: 700
 		outline: none
 		position: relative
 		background: #fff
 		text-align: center
 		color: $darkpale
-		font-size: 32px
+		font-size: 16px
 		border: none
 		border-top-left-radius: 20px
 		border-top-right-radius: 20px

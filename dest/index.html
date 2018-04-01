@@ -12,9 +12,9 @@
 <div class="m-wrapper">
 
     <header class="m-header">
-      <a href="#" class="m-logo-brand"><img src="img/logo.png" alt=""></a>
+      <div class="m-logo-brand"><a href="#"><img src="img/logo.png" alt=""></a></div>
       <h2 class="m-title js-title">Кто вы<br/><span>во время ПМС?</span></h2>
-      <a href="#" class="m-logo-woman"><img src="img/logo-woman.png" alt=""></a>
+      <div class="m-logo-woman"><a href="#"><img src="img/logo-woman.png" alt=""></a></div>
     </header>
 
   <form method="POST" id="question-form">
@@ -53,72 +53,236 @@
 
           <div class="m-slide m-test m-test-first" id="slide-#{i}">
             <div class="m-test__question m-question">
-              <div class="m-question__number">1/7</div>
+              <div class="m-img m-test-first__img"></div>
+              <div class="m-question__number"><span>1/7</span></div>
               <h3 class="m-question__title">Сколько сладостей в день вы съедаете во время ПМС?</h3>
-
               <div class="m-question__inner">
 
-                <div class="m-question__img"><img src="img/test1img.jpg" alt="" class="m-img"></div>
-
-                <div class="m-question__answers">
+                <div class="m-question__answers js-answers">
                   <div class="m-question__answer">
-                    <input type="radio" name="answer" id="answer-1" class="m-answer js-button"/>
+                    <input type="radio" name="answer" id="answer-1" class="m-answer"/>
                     <label for="answer-1" class="m-answer-btn"><span>0-20%</span></label>
                   </div>
                   <div class="m-question__answer">
-                    <input type="radio" name="answer" id="answer-2" class="m-answer js-button"/>
+                    <input type="radio" name="answer" id="answer-2" class="m-answer"/>
                     <label for="answer-2" class="m-answer-btn"><span>60-70%</span></label>
                   </div>
                   <div class="m-question__answer">
-                    <input type="radio" name="answer" id="answer-3" class="m-answer js-button"/>
+                    <input type="radio" name="answer" id="answer-3" class="m-answer"/>
                     <label for="answer-3" class="m-answer-btn"><span>30-50%</span></label>
                   </div>
                   <div class="m-question__answer">
-                    <input type="radio" name="answer" id="answer-4" class="m-answer js-button"/>
+                    <input type="radio" name="answer" id="answer-4" class="m-answer"/>
                     <label for="answer-4" class="m-answer-btn"><span>80-100%</span></label>
                   </div>
 
-                  <div class="m-question__btn"><input type="button" value="Далее" class="m-btn down"></div>
+                  <div class="m-question__btn down"><input type="button" value="Далее" class="m-btn"></div>
                 </div>
               </div>
-
             </div>
           </div>
 
           <div class="m-slide m-test m-test-second" id="slide-#{i}">
-            <div class="m-test__form">
-              <div class="label">3</div>
-              <input type="button" value="ok" class="down">
+            <div class="m-test__question m-question">
+              <div class="m-img m-test-second__img"></div>
+              <div class="m-question__number"><span>2/7</span></div>
+              <h3 class="m-question__title">Что делают близкие, когда узнают, что у вас наступил ПМС?</h3>
+              <div class="m-question__inner">
+
+                <div class="m-question__answers js-answers">
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-5" class="m-answer"/>
+                    <label for="answer-5" class="m-answer-btn"><span>Подкармливают пирожными</span></label>
+                  </div>
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-6" class="m-answer"/>
+                    <label for="answer-6" class="m-answer-btn"><span>Чаще звонят, чтобы поддержать</span></label>
+                  </div>
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-7" class="m-answer"/>
+                    <label for="answer-7" class="m-answer-btn"><span>Ходят по стенке</span></label>
+                  </div>
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-8" class="m-answer"/>
+                    <label for="answer-8" class="m-answer-btn"><span>Уезжают<br/> в мини-отпуск</span></label>
+                  </div>
+
+                  <div class="m-question__btn down"><input type="button"  value="Далее" class="m-btn"></div>
+                </div>
+              </div>
             </div>
           </div>
+
           <div class="m-slide m-test m-test-third" id="slide-#{i}">
-            <div class="m-test__form">
-              <div class="label">3</div>
-              <input type="button" value="ok" class="down">
+            <div class="m-test__question m-question">
+              <div class="m-img m-test-third__img"></div>
+              <div class="m-question__number"><span>3/7</span></div>
+              <h3 class="m-question__title">Какому киноперсонажу вы особенно симпатизируете во время ПМС?</h3>
+              <div class="m-question__inner">
+
+                <div class="m-question__answers">
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-9" class="m-answer"/>
+                    <label for="answer-9" class="m-answer-btn"><span>Бриджит Джонс</span></label>
+                  </div>
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-10" class="m-answer"/>
+                    <label for="answer-10" class="m-answer-btn"><span>Героини<br/> индийского кино</span></label>
+                  </div>
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-11" class="m-answer"/>
+                    <label for="answer-11" class="m-answer-btn"><span>Беатрикс Киддо</span></label>
+                  </div>
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-12" class="m-answer"/>
+                    <label for="answer-12" class="m-answer-btn"><span>Уезжают<br/> в мини-отпуск</span></label>
+                  </div>
+
+                  <div class="m-question__btn down"><input type="button"  value="Далее" class="m-btn"></div>
+                </div>
+              </div>
             </div>
           </div>
+
           <div class="m-slide m-test m-test-fourth" id="slide-#{i}">
-            <div class="m-test__form">
-              <div class="label">3</div>
-              <input type="button" value="ok" class="down">
+            <div class="m-test__question m-question">
+              <div class="m-img m-test-fourth__img"></div>
+              <div class="m-question__number"><span>4/7</span></div>
+              <h3 class="m-question__title">Как выглядит дискомфорт, который  вы испытываете во время ПМС?</h3>
+              <div class="m-question__inner">
+
+                <div class="m-question__answers">
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-13" class="m-answer"/>
+                    <label for="answer-13" class="m-answer-btn"><span>Витание в облаках</span></label>
+                  </div>
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-14" class="m-answer"/>
+                    <label for="answer-14" class="m-answer-btn"><span>Слезливость</span></label>
+                  </div>
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-15" class="m-answer"/>
+                    <label for="answer-15" class="m-answer-btn"><span>Борьба с усталостью</span></label>
+                  </div>
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-16" class="m-answer"/>
+                    <label for="answer-16" class="m-answer-btn"><span>Желание убивать</span></label>
+                  </div>
+
+                  <div class="m-question__btn down"><input type="button"  value="Далее" class="m-btn"></div>
+                </div>
+              </div>
             </div>
           </div>
+
+
           <div class="m-slide m-test m-test-fifth" id="slide-#{i}">
-            <div class="m-test__form">
-              <div class="label">3</div>
-              <input type="button" value="ok" class="down">
+            <div class="m-test__question m-question">
+              <div class="m-img m-test-fifth__img"></div>
+              <div class="m-question__number"><span>5/7</span></div>
+              <h3 class="m-question__title">Во время ПМС вы можете<br/> взорваться даже от?</h3>
+              <div class="m-question__inner">
+
+                <div class="m-question__answers">
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-17" class="m-answer"/>
+                    <label for="answer-17" class="m-answer-btn"><span>Критики вашего отчета</span></label>
+                  </div>
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-18" class="m-answer"/>
+                    <label for="answer-18" class="m-answer-btn"><span>Того, что пошел дождь</span></label>
+                  </div>
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-19" class="m-answer"/>
+                    <label for="answer-19" class="m-answer-btn"><span>Звука соседской дрели</span></label>
+                  </div>
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-20" class="m-answer"/>
+                    <label for="answer-20" class="m-answer-btn"><span>Хулиганских проделок кота</span></label>
+                  </div>
+
+                  <div class="m-question__btn down"><input type="button"  value="Далее" class="m-btn"></div>
+                </div>
+              </div>
             </div>
           </div>
+
+
           <div class="m-slide m-test m-test-sixth" id="slide-#{i}">
-            <div class="m-test__form">
-              <div class="label">3</div>
-              <input type="button" value="ok" class="down">
+            <div class="m-test__question m-question">
+              <div class="m-img m-test-sixth__img"></div>
+              <div class="m-question__number"><span>6/7</span></div>
+              <h3 class="m-question__title">Какой стиль одежды вы предпочитаете во время ПМС?</h3>
+              <div class="m-question__inner">
+
+                <div class="m-question__answers">
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-21" class="m-answer"/>
+                    <label for="answer-21" class="m-answer-btn"><span>Фантазийно-игривый</span></label>
+                  </div>
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-22" class="m-answer"/>
+                    <label for="answer-22" class="m-answer-btn"><span>Романтично-<br/>чувственный</span></label>
+                  </div>
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-23" class="m-answer"/>
+                    <label for="answer-23" class="m-answer-btn"><span>Воинственно-дерзкий</span></label>
+                  </div>
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-24" class="m-answer"/>
+                    <label for="answer-24" class="m-answer-btn"><span>Нейтрально-<br/>комфортный</span></label>
+                  </div>
+
+                  <div class="m-question__btn down"><input type="button"  value="Далее" class="m-btn"></div>
+                </div>
+              </div>
             </div>
           </div>
+
+
           <div class="m-slide m-test m-test-seventh" id="slide-#{i}">
-            <div class="m-test__form">
-              <div class="label">3</div>
-              <input type="button" value="ok" class="down">
+            <div class="m-test__question m-question">
+              <div class="m-img m-test-seventh__img"></div>
+              <div class="m-question__number"><span>7/7</span></div>
+              <h3 class="m-question__title">Как проявляется ваш ПМС<br/> на физическом плане?</h3>
+              <div class="m-question__inner">
+
+                <div class="m-question__answers">
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-25" class="m-answer"/>
+                    <label for="answer-25" class="m-answer-btn"><span>Головными болями</span></label>
+                  </div>
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-26" class="m-answer"/>
+                    <label for="answer-26" class="m-answer-btn"><span>Болезненными ощущениями в груди</span></label>
+                  </div>
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-27" class="m-answer"/>
+                    <label for="answer-27" class="m-answer-btn"><span>Зверским аппетитом</span></label>
+                  </div>
+                  <div class="m-question__answer">
+                    <input type="radio" name="answer" id="answer-28" class="m-answer"/>
+                    <label for="answer-28" class="m-answer-btn"><span>Расстройством кишечника</span></label>
+                  </div>
+
+                  <div class="m-question__btn down"><input type="button"  value="Далее" class="m-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="m-slide m-test m-test-result" id="slide-#{i}">
+            <div class="m-result m-result-first">
+            
+              <div class="m-result__inner">
+                <h3>Результат</h3>
+                <h2>Вы – рассеянная «волшебница»</h2>
+            
+              </div>
+            
+            
+            
+              <div class="m-result__btn up"><input type="button"  value="Поробовать еще раз" class="m-btn"></div>
             </div>
           </div>
 

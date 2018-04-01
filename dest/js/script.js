@@ -9,6 +9,8 @@
 
 $(document).ready(function(){
 	app.init();
+	var blockAnswers = $(".down").parent();
+	blockAnswers.find(".m-answer").change(function () {$(".down").prop("disabled", false);});
 });
 
 var app = app || {
@@ -36,19 +38,27 @@ var app = app || {
 	},
 
 	slide_functions: function(){
-		var total_slides = 8;
+		var total_slides = 9;
 
 		//Slide down
 		$(".down").on("click", function(){
+
 			//Check our limit
 			if (app.current_slide < total_slides){
+
 				app.current_slide++;
 				app.slide_to(app.current_slide);
-				$(".js-title").css( "display", "block" );
+				$(".js-title").css( "opacity", "1" );
 			}
+		});
+
+		// Try again
+		$(".up").on("click", function(){
+				app.slide_to(app.current_slide = 1);
 		});
 	}
 }
+
 
 const people = introContainer.querySelector(".js-people"),
 			woman = introContainer.querySelector(".js-woman"),

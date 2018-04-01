@@ -12,8 +12,8 @@ const gulp = require('gulp'),
       sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('html', function() {
-    return gulp.src('src/*.html')
-        // .pipe(rigger())
+    return gulp.src(['src/*.html', 'src/**/*.html'])
+        .pipe(rigger())
         .pipe(gulp.dest('dest'))
 });
 
@@ -39,7 +39,7 @@ gulp.task('sass', function() {
 
 gulp.task('img', function() {
   return gulp.src(['src/img/*.*', 'src/img/**/*.*'])
-    .pipe(image())
+    // .pipe(image())
     .pipe(gulp.dest('dest/img'))
 });
 
@@ -50,7 +50,7 @@ gulp.task('js', function() {
 });
 
 gulp.task('dev:watch', function() {
-  gulp.watch('src/*.html', gulp.series('html'));
+  gulp.watch(['src/*.html', 'src/**/*.html'], gulp.series('html'));
   gulp.watch('src/css/*.*', gulp.series('sass'));
   gulp.watch('src/img/*.*', gulp.series('img'));
   gulp.watch('src/js/*.*', gulp.series('js'));
