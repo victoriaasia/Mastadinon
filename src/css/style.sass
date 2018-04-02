@@ -21,7 +21,6 @@ body
 	max-width: 90%
 
 .m-wrapper, form
-	position: fixed
 	width: 100%
 	height: 100%
 	a
@@ -41,12 +40,14 @@ body
 	top: 105px
 	left: 0
 	width: 100%
-	min-width: 768px
 	height: calc(100% - 105px)
 	// +size(100%)
 	/* border: 1px solid red */
 	overflow: hidden
 	font-family: "Montserrat", sans-serif
+	@include bp-mob
+		top: 80px
+		height: calc(102vh - 80px)
 
 #m-slider
 	width: 100%
@@ -78,6 +79,8 @@ body
 		overflow: hidden
 	&-first
 		background: url("../img/test1.jpg") no-repeat
+		@include bp-mob
+			background: url("../img/mob/test1.jpg") no-repeat
 		.m-answer + .m-answer-btn
 			white-space: nowrap
 			text-transform: uppercase
@@ -221,31 +224,36 @@ body
 
 
 .m-intro-slide
-  width: 100%
-  height: 100%
-  background: url('../img/back.jpg')
-  background-size: cover
-  &__woman,
-  &__people
-	  position: absolute
-	  bottom: 0
-	  filter: drop-shadow(-155px 30px 60px #000)
-	  background-size: contain !important
-  &__people
-	  width: 50%
-	  height: 70%
-	  left: 10%
-	  background: url('../img/people.png') no-repeat
-	  background-size: contain !important
-	  background-position: 60% 90% !important
-	  z-index: 9
-  &__woman
-	  width: 35%
-	  height: 80%
-	  right: 0
-	  background: url('../img/woman.png') no-repeat
-	  background-position: 60% 90% !important
-	  z-index: 0
+	width: 100%
+	height: 100%
+	background: url('../img/back.jpg')
+	background-size: cover
+	@include bp-mob
+		background: url('../img/mob/intro.jpg') no-repeat
+		background-position: center bottom
+		background-size: cover
+	&__woman, &__people
+		position: absolute
+		bottom: 0
+		filter: drop-shadow(-155px 30px 60px #000)
+		background-size: contain !important
+		@include bp-mob
+			display: none
+	&__people
+		width: 50%
+		height: 70%
+		left: 10%
+		background: url('../img/people.png') no-repeat
+		background-size: contain !important
+		background-position: 60% 90% !important
+		z-index: 9
+	&__woman
+		width: 35%
+		height: 80%
+		right: 0
+		background: url('../img/woman.png') no-repeat
+		background-position: 60% 90% !important
+		z-index: 0
 
 #introContainer
   width: 100%
@@ -258,6 +266,8 @@ body
   // min-height: 650px
   height: 100%
   background-position: 50% 87%
+  @include bp-mob
+   	background: transparent
 
 .m-text
   position: absolute

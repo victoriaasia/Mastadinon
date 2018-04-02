@@ -52,6 +52,6 @@ gulp.task('js', function() {
 gulp.task('dev:watch', function() {
   gulp.watch(['src/*.html', 'src/**/*.html'], gulp.series('html'));
   gulp.watch('src/css/*.*', gulp.series('sass'));
-  gulp.watch('src/img/*.*', gulp.series('img'));
+  gulp.watch(['src/img/*.*', 'src/img/**/*.*'], gulp.series('img'));
   gulp.watch('src/js/*.*', gulp.series('js'));
 });
