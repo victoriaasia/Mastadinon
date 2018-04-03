@@ -35,6 +35,10 @@
     box-shadow: 11px 10px 11px -6px rgba($shadow,0.75)
     position: relative
     overflow: hidden
+    @include bp-table
+			width: 80%
+			height: 90%
+			top: -35px
   &__title
     font-size: 40px
     font-family: "Georgia"
@@ -73,3 +77,6 @@
       line-height: 1.2
     img
       max-width: 100%
+    @include bp-table
+      padding: 10px 3px
+      background: $pale
