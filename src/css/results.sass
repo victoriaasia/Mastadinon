@@ -12,12 +12,20 @@
   position: relative
   &-first
     background: url("../img/result1.jpg") no-repeat
+    @include bp-table
+      background: url("../img/mob/result1.jpg") no-repeat
   &-second
     background: url("../img/result2.jpg") no-repeat
+    @include bp-table
+      background: url("../img/mob/result2.jpg") no-repeat
   &-third
     background: url("../img/result3.jpg") no-repeat
+    @include bp-table
+      background: url("../img/mob/result3.jpg") no-repeat
   &-fourth
     background: url("../img/result4.jpg") no-repeat
+    @include bp-table
+      background: url("../img/mob/result4.jpg") no-repeat
   &__inner
     width: 790px
     height: auto
