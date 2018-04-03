@@ -10,35 +10,65 @@
   background-size: cover !important
   background-position: center !important
   position: relative
+  @include bp-table
+		align-items: flex-start
   &-first
     background: url("../img/result1.jpg") no-repeat
     @include bp-table
       background: url("../img/mob/result1.jpg") no-repeat
+      background-position: bottom !important
   &-second
     background: url("../img/result2.jpg") no-repeat
     @include bp-table
       background: url("../img/mob/result2.jpg") no-repeat
+      background-position: bottom !important
+      &::before
+        position: absolute
+        content: ''
+        background: url("../img/mob/result3img.png") no-repeat
+        background-size: contain
+        left: 12px
+        bottom: 80px
+        width: 70px
+        height: 295px
+        z-index: 999
   &-third
     background: url("../img/result3.jpg") no-repeat
     @include bp-table
       background: url("../img/mob/result3.jpg") no-repeat
+      background-position: bottom !important
+      &::before
+        position: absolute
+        content: ''
+        background: url("../img/mob/result3img.png") no-repeat
+        background-size: contain
+        left: 12px
+        bottom: 80px
+        width: 70px
+        height: 295px
+        z-index: 999
   &-fourth
     background: url("../img/result4.jpg") no-repeat
     @include bp-table
       background: url("../img/mob/result4.jpg") no-repeat
+      background-position: bottom !important
   &__inner
     width: 790px
-    height: auto
-    min-height: 400px
+    height: 85%
+    min-height: auto
     position: relative
     background: $light
     box-shadow: 11px 10px 11px -6px rgba($shadow,0.75)
     position: relative
     overflow: hidden
+    display: flex
+    flex-direction: column
     @include bp-table
-			width: 80%
-			height: 90%
-			top: -35px
+      width: 80%
+      height: 90%
+      min-height: auto
+    @include bp-mob
+      height: auto
   &__title
     font-size: 40px
     font-family: "Georgia"
@@ -47,6 +77,10 @@
     font-style: italic
     text-align: center
     padding: 10px
+    @include bp-table
+      font-size: 30px
+    @include bp-mob
+      font-size: 6vw
   &__subtitle
     font-size: 36px
     font-family: "mpb", Arial, sans-serif
@@ -55,28 +89,76 @@
     text-transform: uppercase
     text-align: center
     padding: 0 10px 20px
+    @include bp-table
+      font-size: 25px
+      padding: 0 10px 1vw
+    @include bp-mob
+      font-size: 6vw
   &__text
     font-size: 18px
     font-family: "mpr"
     line-height: 1.167
     text-align: center
     padding: 10px 25px
+    @include bp-table
+      font-size: 16px
+      padding: 10px 15px
+    @include bp-mob
+      font-size: 3vw
+      padding: 3vw
     .au
       font-size: 14px
       margin-top: 10px
+      @include bp-table
+        margin-top: 3vw
+        font-size: 12px
+      @include bp-mob
+        font-size: 2.5vw
+        margin-top: 1vw
   &__footer
     display: flex
     justify-content: space-between
     align-items: center
     padding: 10px 5vw
+    @include bp-table
+      flex-direction: column
+      justify-content: flex-end
+      flex-grow: 1
+      padding: 10px 10px 5vw
+      .m-btn
+        font-size: 18px
+        @include bp-mob
+          font-size: 3vw
   &__info
     padding: 0 10px
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    flex-grow: 2
+    @include bp-table
+      display: none !important
     p
       font-family: "mpr"
       color: $verylight
       line-height: 1.2
     img
-      max-width: 100%
-    @include bp-table
-      padding: 10px 3px
-      background: $pale
+      width: 100%
+
+
+.m-disclaimer
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+  height: auto
+  padding: 3px
+  background: $darkpale
+  display: none
+  @include bp-table
+    display: block
+  p
+    font-family: "mpr"
+    color: $verylight
+    line-height: 1.2
+  img
+    max-width: 100%

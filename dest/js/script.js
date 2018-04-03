@@ -35,6 +35,7 @@ var app = app || {
 
 	slide_functions: function(){
 		var total_slides = 9;
+		var body = $("#m-slides");
 		$(".m-down").on("click", function(){
 
 			if (app.current_slide < total_slides){
@@ -42,7 +43,7 @@ var app = app || {
 				app.current_slide++;
 				app.slide_to(app.current_slide);
 				$(".js-title").css( "opacity", "1" );
-			}
+			} 
 		});
 
 		// Try again

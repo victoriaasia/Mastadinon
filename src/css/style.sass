@@ -10,12 +10,6 @@
 @import "header"
 @import "results"
 
-
-@include bp-mob
-	.m-wrapper
-		br
-			display: none
-
 body
 	overflow-x: hidden
 
@@ -51,8 +45,8 @@ body
 	overflow: hidden
 	font-family: "Montserrat", sans-serif
 	@include bp-table
-		top: 65px
-		height: calc(100% - 65px)
+		top: 90px
+		height: calc(100% - 90px)
 
 #m-slider
 	width: 100%
@@ -68,6 +62,8 @@ body
 	display: flex
 	align-items: center
 	justify-content: center
+	@include bp-table
+		align-items: flex-start
 	.m-img
 		position: absolute
 		max-width: 100%
@@ -85,7 +81,6 @@ body
 		@include bp-table
 			width: 80%
 			height: 90%
-			top: -35px
 	&-first
 		background: url("../img/test1.jpg") no-repeat
 		.m-answer + .m-answer-btn
@@ -101,7 +96,7 @@ body
 			background-size: 220px
 			background-position: 10% 80%
 			@include bp-table
-				background-size: 165px
+				background-size: 35%
 				background-position: bottom
 		@include bp-table
 			background: url("../img/mob/test1.jpg") no-repeat
@@ -113,10 +108,28 @@ body
 			background-size: 275px
 			background-position: left bottom
 			@include bp-table
-				background-size: 165px
+				background-size: 48%
 				background-position: bottom
 		@include bp-table
 			background: url("../img/mob/test2.jpg") no-repeat
+			position: relative
+			&::before
+				background: url("../img/mob/test2img1.png") no-repeat
+				width: 200px
+				height: 230px
+				left: -30px
+				bottom: 40px
+			&::after
+				background: url("../img/mob/test2img2.png") no-repeat
+				width: 140px
+				height: 45%
+				right: -25px
+				bottom: 30px
+			&::before, &::after
+				position: absolute
+				content: ''
+				background-size: contain !important
+				z-index: 99
 	&-third
 		background: url("../img/test3.jpg") no-repeat
 		&__img
@@ -124,8 +137,8 @@ body
 			background-size: 230px
 			background-position: 10% 65%
 			@include bp-table
-				background-size: 165px
-				background-position: bottom
+				background-size: 45%
+				background-position: 50% 97%
 		@include bp-table
 			background: url("../img/mob/test3.jpg") no-repeat
 	&-fourth
@@ -135,10 +148,27 @@ body
 			background-size: 170px
 			background-position: 15% 80%
 			@include bp-table
-				background-size: 165px
-				background-position: bottom
+				display: none
 		@include bp-table
 			background: url("../img/mob/test4.jpg") no-repeat
+			position: relative
+			&::before
+				background: url("../img/mob/test4img1.png") no-repeat
+				width: 180px
+				height: 270px
+				left: 20px
+				bottom: 10%
+			&::after
+				background: url("../img/mob/test4img2.png") no-repeat
+				width: 130px
+				height: 205px
+				right: 5%
+				bottom: 10%
+			&::before, &::after
+				position: absolute
+				content: ''
+				background-size: contain !important
+				z-index: 99
 	&-fifth
 		background: url("../img/test5.jpg") no-repeat
 		&__img
@@ -146,10 +176,22 @@ body
 			background-size: 200px
 			background-position: 10% 60%
 			@include bp-table
-				background-size: 165px
-				background-position: bottom
+				background-size: 50%
+				background-position: 50% 95%
 		@include bp-table
 			background: url("../img/mob/test5.jpg") no-repeat
+			position: relative
+			&::before
+				background: url("../img/mob/test5img.png") no-repeat
+				width: 100px
+				height: 280px
+				left: 5%
+				bottom: 10%
+			&::before
+				position: absolute
+				content: ''
+				background-size: contain !important
+				z-index: 999
 	&-sixth
 		background: url("../img/test6.jpg") no-repeat
 		&__img
@@ -157,10 +199,22 @@ body
 			background-size: 230px
 			background-position: 10% 65%
 			@include bp-table
-				background-size: 165px
-				background-position: bottom
+				background-size: 45%
+				background-position: 50% 97%
 		@include bp-table
 			background: url("../img/mob/test6.jpg") no-repeat
+			position: relative
+			&::before
+				background: url("../img/mob/test6img.png") no-repeat
+				width: 100px
+				height: 280px
+				left: 5%
+				bottom: 10%
+			&::before
+				position: absolute
+				content: ''
+				background-size: contain !important
+				z-index: 999
 	&-seventh
 		background: url("../img/test7.jpg") no-repeat
 		&__img
@@ -168,10 +222,22 @@ body
 			background-size: 245px
 			background-position: 7% 70%
 			@include bp-table
-				background-size: 165px
-				background-position: bottom
+				background-size: 40%
+				background-position: 50% 97%
 		@include bp-table
 			background: url("../img/mob/test7.jpg") no-repeat
+			position: relative
+			&::before
+				background: url("../img/mob/test7img.png") no-repeat
+				width: 130px
+				height: 280px
+				right: 5%
+				bottom: 10%
+			&::before, &::after
+				position: absolute
+				content: ''
+				background-size: contain !important
+				z-index: 999
 
 
 .m-question
@@ -202,11 +268,12 @@ body
 		text-transform: uppercase
 		font-size: 27px
 		text-align: left
-		padding: 45px 45px 0 200px	
+		padding: 45px 45px 0 200px
 		@include bp-table
-			padding: 15px 25px 0 110px
-			font-size: 24px
+			padding: 25px 15px 10px 110px
+			font-size: 26px
 		@include bp-mob
+			padding: 25px 5px 10px 110px
 			font-size: 5vw
 	&__inner
 		width: 100%
@@ -224,13 +291,15 @@ body
 		padding: 20px 45px 20px 0
 		@include bp-table
 			width: 100%
-			max-height: 50%
+			max-height: 45%
 			align-items: center
 			padding: 10px
 	&__answer
 		flex: 1 1 40%
 		max-width: 45%
 		margin: 10px
+		@include bp-table
+			margin: 5px
 	&__btn
 		padding-top: 20px
 
@@ -265,7 +334,7 @@ body
 			background: rgba(#fff, 0.5)
 		@include bp-table
 			height: 85px
-			font-size: 14px
+			font-size: 18px
 		@include bp-mob
 			height: 20vw
 			font-size: 3vw
@@ -286,11 +355,9 @@ body
 	background-position: center
 	background-color: $pale
 	position: relative
-	&:last-child
-		background: green
 	@include bp-table
-		min-height: calc(100vh - 65px)
-		height: calc(100vh - 65px)
+		min-height: calc(100vh - 90px)
+		height: calc(100vh - 90px)
 		background-position: center bottom
 
 
@@ -353,19 +420,30 @@ body
 	transform: translateX(-50%)
 	text-align: center
 	z-index: 999
+	@include bp-table
+		padding: 7vw 10px
 	&__title
 		margin: 0
 		font-size: 64px
 		line-height: 0.7
 		color: #fff
 		font-family: "mpext", Arial, sans-serif
+		@include bp-table
+			font-size: 48px
+		@include bp-mob
+			font-size: 9vw
+			line-height: 0.8
 		span
-			color: transparent
+			color: $yellow
 			font-style: italic
 			font-family: "kpbi"
 			font-size: 48px
 			font-weight: bold
 			white-space: nowrap
+			@include bp-table
+				font-size: 40px
+			@include bp-mob
+				font-size: 7vw
 	&__desc
 		width: 60%
 		font-size: 24px
@@ -375,23 +453,31 @@ body
 		margin: 17px auto 35px
 		z-index: 3
 		@include bp-table
-			width: 90%
+			width: 95%
 			font-size: 18px
+			margin: 25px auto
 
 .m-btn
-  background: $yellow
-  padding: 10px 55px
-  outline: none
-  border: 0px
-  border-top-left-radius: 50px
-  border-top-right-radius: 50px
-  border-bottom-left-radius: 50px
-  border-bottom-right-radius: 50px
-  color: #fff
-  font-size: 27px
-  font-family: "mpb", Arial, sans-serif
-  text-transform: uppercase
-  cursor: pointer
+	background: $yellow
+	padding: 10px 55px
+	outline: none
+	border: 0px
+	border-top-left-radius: 50px
+	border-top-right-radius: 50px
+	border-bottom-left-radius: 50px
+	border-bottom-right-radius: 50px
+	color: #fff
+	font-size: 27px
+	font-family: "mpb", Arial, sans-serif
+	text-transform: uppercase
+	cursor: pointer
+	@include bp-table
+		font-size: 20px
+		// padding: 10px 5vw
+	@include bp-mob
+		font-size: 4vw
+
+
 
 
 
@@ -400,12 +486,6 @@ body
   #introContainer
     width: 100%
 
-@media all and (max-width: 980px)
-  #introContainer
-    background-position: 50% 90%
-
-  .m-text
-  	width: 100%
-    left: 50%
-    // &__desc
-		// 	width: 80%
+// @media all and (max-width: 980px)
+//   #introContainer
+//     background-position: 50% 90%

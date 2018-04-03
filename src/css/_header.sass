@@ -13,8 +13,7 @@
   > *
     flex: 1
   @include bp-table
-    height: 65px
-    border-bottom: 0px
+    height: 90px
 .m-logo-brand
   img
     max-width: 220px
@@ -28,6 +27,7 @@
       max-width: 20vw
 
 .m-title
+  flex: 2
   margin: 0
   font-size: 48px
   line-height: 0.5
@@ -36,6 +36,11 @@
   font-family: "mpext", Arial, sans-serif
   opacity: 0
   transition: opacity 0.5s ease
+  @include bp-table
+    font-size: 36px
+    line-height: 0.7
+  @include bp-mob
+    font-size: 30px
   span
     color: $yellow
     font-style: italic
@@ -43,3 +48,7 @@
     font-size: 30px
     font-weight: bold
     white-space: nowrap
+    @include bp-table
+      font-size: 26px
+    @include bp-mob
+      font-size: 20px

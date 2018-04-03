@@ -5,6 +5,8 @@
   display: flex
   padding: 15px
   z-index: 99999
+  @include bp-table
+    padding: 7px 5px
   &-icon
     width: 35px
     height: 35px
@@ -25,6 +27,8 @@
 
 .m-result
   &__social
+    @include bp-table
+      margin-top: 3vw
     &-title
       font-size: 12px
       font-family: "mpb"
@@ -32,6 +36,8 @@
       text-transform: uppercase
       line-height: 2
       text-align: center
+      @include bp-table
+        font-size: 10px
     &-icons
       display: flex
       justify-content: center
@@ -49,6 +55,10 @@
       border-radius: 50%
       margin-right: 7px
       transition: background ease 0.5s
+      @include bp-mob
+        height: 25px
+        width: 25px
+        font-size: 14px
       &:last-child
         margin-right: 0
       &:hover
