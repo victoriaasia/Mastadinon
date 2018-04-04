@@ -15,7 +15,7 @@ body
 	overflow-x: hidden
 
 .m-landscapewarn
-	opacity: 0
+	display: none
 	position: absolute
 	content: ''
 	width: 100%
@@ -25,15 +25,13 @@ body
 	background: $darkpale
 	color: $darkgray
 	z-index: 999
-	display: flex
 	justify-content: center
 	align-items: center
 	font-family: "mpb", Arial, sans-serif
 	font-size: 28px
-	transition: opacity 0.5s ease
 	z-index: 0
 	@include bp-landscape
-		opacity: 1
+		display: flex
 		z-index: 99999
 
 
@@ -485,6 +483,8 @@ body
 			width: 95%
 			font-size: 18px
 			margin: 25px auto
+		@include bp-desktop
+			font-size: 38px
 
 .m-btn
 	background: $yellow
