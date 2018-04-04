@@ -17,6 +17,21 @@
     @include bp-table
       background: url("../img/mob/result1.jpg") no-repeat
       background-position: bottom !important
+      &::before
+        position: absolute
+        content: ''
+        background: url("../img/mob/result1img.png") no-repeat
+        background-size: contain
+        bottom: 15%
+        left: 3vw
+        width: 150px
+        height: 240px
+        z-index: 9999
+        @include bp-mob
+          bottom: 13%
+          left: 1vw
+          width: 110px
+          height: 180px
   &-second
     background: url("../img/result2.jpg") no-repeat
     @include bp-table
@@ -25,7 +40,7 @@
       &::before
         position: absolute
         content: ''
-        background: url("../img/mob/result3img.png") no-repeat
+        background: url("../img/mob/result2img.png") no-repeat
         background-size: contain
         left: 12px
         bottom: 80px
@@ -42,16 +57,42 @@
         content: ''
         background: url("../img/mob/result3img.png") no-repeat
         background-size: contain
-        left: 12px
-        bottom: 80px
-        width: 70px
-        height: 295px
+        left: 5%
+        bottom: 15%
+        width: 95px
+        height: 240px
         z-index: 999
   &-fourth
     background: url("../img/result4.jpg") no-repeat
     @include bp-table
       background: url("../img/mob/result4.jpg") no-repeat
       background-position: bottom !important
+      &::before, &::after
+        position: absolute
+        content: ''
+        z-index: 999
+        background-size: contain !important
+      &::before
+        background: url("../img/mob/result4img1.png") no-repeat
+        left: -105px
+        bottom: 16vw
+        width: 285px
+        height: 260px
+        @include bp-mob
+          left: -100px
+          width: 250px
+          height: 230px
+      &::after
+        background: url("../img/mob/result4img2.png") no-repeat
+        right: 13%
+        bottom: 16vw
+        width: 120px
+        height: 190px
+        @include bp-mob
+          right: 8vw
+          width: 100px
+          height: 160px
+
   &__inner
     width: 790px
     height: 85%
@@ -65,8 +106,8 @@
     flex-direction: column
     @include bp-table
       width: 80%
-      height: 90%
-      min-height: auto
+      height: auto
+      max-height: 90%
     @include bp-mob
       height: auto
   &__title
@@ -80,7 +121,8 @@
     @include bp-table
       font-size: 30px
     @include bp-mob
-      font-size: 6vw
+      font-size: 16px
+      padding: 3vw
   &__subtitle
     font-size: 36px
     font-family: "mpb", Arial, sans-serif
@@ -93,7 +135,7 @@
       font-size: 25px
       padding: 0 10px 1vw
     @include bp-mob
-      font-size: 6vw
+      font-size: 16px
   &__text
     font-size: 18px
     font-family: "mpr"
@@ -101,17 +143,17 @@
     text-align: center
     padding: 10px 25px
     @include bp-table
-      font-size: 16px
+      font-size: 13px
       padding: 10px 15px
     @include bp-mob
-      font-size: 3vw
+      font-size: 12px
       padding: 3vw
     .au
       font-size: 14px
       margin-top: 10px
       @include bp-table
         margin-top: 3vw
-        font-size: 12px
+        font-size: 9px
       @include bp-mob
         font-size: 2.5vw
         margin-top: 1vw
@@ -126,7 +168,7 @@
       flex-grow: 1
       padding: 10px 10px 5vw
       .m-btn
-        font-size: 18px
+        font-size: 16px
         @include bp-mob
           font-size: 3vw
   &__info
