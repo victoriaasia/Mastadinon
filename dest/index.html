@@ -24,12 +24,12 @@
       <a href="#" class="m-social-icon m-link"><i class="fab fa-twitter"></i></a>
     </div>
 
-  <form method="POST" id="question-form">
+
 
     <div id="m-slides">
       <div id="m-slider" class="js-slider">
 
-
+      <form method="POST" id="question-form">
 
         <div class="m-slide m-intro" id="slide-#{i}">
 
@@ -44,7 +44,8 @@
                    <span>во время ПМС?</span>
                 </h2>
                 <p class="m-text__desc">Часто во время критических дней мы становимся не похожими на себя – превращаемся в рассеянных «волшебниц» или разъяренных фурий. Пройдите интерактивный тест и узнайте, кто вы во время ПМС!</p>
-                <input type="button" value="Начать" class="m-btn m-down">
+                <!-- <input type="button" value="Начать" class="m-btn m-down"> -->
+                <div class="m-btn m-down">Начать</div>
               </div>
             </div>
           </div>
@@ -75,7 +76,7 @@
                     <label for="answer-4" class="m-answer-btn"><span>80-100%</span></label>
                   </div>
 
-                  <div class="m-question__btn m-down"><input disable="true" type="button" value="Далее" class="m-btn"></div>
+                  <div class="m-question__btn m-down"><div class="m-btn">Далее</div></div>
                 </div>
               </div>
             </div>
@@ -106,7 +107,7 @@
                     <label for="answer-8" class="m-answer-btn"><span>Уезжают<br/> в мини-отпуск</span></label>
                   </div>
 
-                  <div class="m-question__btn m-down"><input disable="true" type="button" value="Далее" class="m-btn"></div>
+                  <div class="m-question__btn m-down"><div class="m-btn">Далее</div></div>
                 </div>
               </div>
             </div>
@@ -137,7 +138,7 @@
                     <label for="answer-12" class="m-answer-btn"><span>Уезжают<br/> в мини-отпуск</span></label>
                   </div>
 
-                  <div class="m-question__btn m-down"><input disable="true" type="button" value="Далее" class="m-btn"></div>
+                  <div class="m-question__btn m-down"><div class="m-btn">Далее</div></div>
                 </div>
               </div>
             </div>
@@ -168,7 +169,7 @@
                     <label for="answer-16" class="m-answer-btn"><span>Желание убивать</span></label>
                   </div>
 
-                  <div class="m-question__btn m-down"><input disable="true" type="button" value="Далее" class="m-btn"></div>
+                  <div class="m-question__btn m-down"><div class="m-btn">Далее</div></div>
                 </div>
               </div>
             </div>
@@ -200,7 +201,7 @@
                     <label for="answer-20" class="m-answer-btn"><span>Хулиганских проделок кота</span></label>
                   </div>
 
-                  <div class="m-question__btn m-down"><input disable="true" type="button" value="Далее" class="m-btn"></div>
+                  <div class="m-question__btn m-down"><div class="m-btn">Далее</div></div>
                 </div>
               </div>
             </div>
@@ -232,7 +233,7 @@
                     <label for="answer-24" class="m-answer-btn"><span>Нейтрально-<br/>комфортный</span></label>
                   </div>
 
-                  <div class="m-question__btn m-down"><input disable="true" type="button" value="Далее" class="m-btn"></div>
+                  <div class="m-question__btn m-down"><div class="m-btn">Далее</div></div>
                 </div>
               </div>
             </div>
@@ -264,13 +265,17 @@
                     <label for="answer-28" class="m-answer-btn"><span>Расстройством кишечника</span></label>
                   </div>
 
-                  <div class="m-question__btn m-down"><input disable="true" type="button" value="Далее" class="m-btn"></div>
+                  <div class="m-question__btn m-down">
+                    <input type="submit" class="m-btn" value="Далее"/>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="m-slide m-test m-test-result" id="slide-#{i}">
+          </form>
+
+          <!-- <div class="m-slide m-test m-test-result" id="slide-#{i}">
             <div class="m-result m-result-third">
             
               <div class="m-result__inner">
@@ -309,14 +314,12 @@
               </div>
             
             </div>
-          </div>
-
-
+          </div> -->
 
       </div>
     </div>
 
-    </form>
+
 
 
 </div>
