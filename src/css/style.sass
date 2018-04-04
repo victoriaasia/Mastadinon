@@ -306,7 +306,7 @@ body
 			padding: 25px 15px 10px 100px
 			font-size: 26px
 		@include bp-mob
-			padding: 15px 10px 10px 100px
+			padding: 10px 10px 5px 100px
 			font-size: 4.5vw
 	&__inner
 		width: 100%
@@ -326,7 +326,7 @@ body
 			width: 100%
 			max-height: 45%
 			align-items: center
-			padding: 10px 5vw
+			padding: 0px 5vw
 	&__answer
 		flex: 1 1 40%
 		max-width: 45%
@@ -335,6 +335,8 @@ body
 			margin: 5px
 	&__btn
 		padding-top: 20px
+		@include bp-table
+			padding-top: 5px
 
 
 
@@ -357,7 +359,8 @@ body
 	-webkit-appearance: none !important
 	@include bp-table
 		font-size: 20px
-		// padding: 10px 5vw
+		min-width: auto
+		padding: 10px 25px
 	@include bp-mob
 		font-size: 4vw
 
