@@ -2,6 +2,8 @@ $(document).ready(function(){
 	app.init();
 });
 
+
+// slider
 var app = app || {
 	init: function(){
 		app.slide_functions();
@@ -39,15 +41,18 @@ var app = app || {
 				$(".js-logo").css("max-width","22vw" );
 			}
 		});
-
-		// Try again
-		$(".js-repeat").on("click", function(){
-				app.slide_to(app.current_slide = 1);
-				$(".js-title").css( "opacity", "0" );
-		});
 	}
 };
 
+
+// Try again
+$(".js-repeat").click(function () {
+		app.slide_to(app.current_slide = 1);
+		$(".js-slider").css( "top", "0px" );
+		$(".js-title").css( "opacity", "0" );
+});
+
+// results
 $(".js-result-btn").click(function () {
 	$('.js-wrapper').addClass('m-result-wrapper');
 	var chk1 = $('#m-form').find('.m-answer1:checked').length;
@@ -70,6 +75,8 @@ $(".js-result-btn").click(function () {
 	}
 });
 
+// front page
+
 const people = introContainer.querySelector(".js-people"),
 			woman = introContainer.querySelector(".js-woman"),
 			maxMove = introContainer.offsetWidth / 30,
@@ -89,7 +96,6 @@ function getMousePos(xRef, yRef) {
 }
 
 document.body.addEventListener("mousemove", function(e) {
-
   let mousePos = getMousePos(e.clientX, e.clientY),
   distX = mousePos.x - peopleCenterX,
   distY = mousePos.y - peopleCenterY,
@@ -102,5 +108,4 @@ document.body.addEventListener("mousemove", function(e) {
 		woman.style.transform = "translate("+(-1*distX)/-12+"px,"+(-1*distY)/-12+"px)";
 		introContainer.style.backgroundPosition = `calc(87% + ${distX/50}px) calc(87% + ${distY/50}px)`;
   }
-
 });
