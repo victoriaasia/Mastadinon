@@ -62,16 +62,16 @@ $(".js-result-btn").click(function () {
 	var chk4 = $('#m-form').find('.m-answer4:checked').length;
 
 	if(chk1 > chk2 && chk1 > chk3 && chk1 > chk4) {
-		$(".js-result").html("results/result1.html");
+		$(".js-result").load("results/result1.html");
 		$(".js-social").attr("data-url", "http://pms.woman.ru/share/1/");
 	} else if (chk2 > chk1 && chk2 > chk3 && chk2 > chk4) {
-		$(".js-result").html("results/result2.html");
+		$(".js-result").load("results/result2.html");
 		$(".js-social").attr("data-url", "http://pms.woman.ru/share/2/");
 	} else if (chk3 > chk1 && chk3 > chk2 && chk3 > chk4) {
-		$(".js-result").html("results/result3.html");
+		$(".js-result").load("results/result3.html");
 		$(".js-social").attr("data-url", "http://pms.woman.ru/share/3/");
 	} else {
-		$(".js-result").html("results/result4.html");
+		$(".js-result").load("results/result4.html");
 		$(".js-social").attr("data-url", "http://pms.woman.ru/share/4/");
 	}
 });
