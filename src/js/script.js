@@ -47,9 +47,8 @@ var app = app || {
 
 // Try again
 $(".js-repeat").click(function () {
-		app.slide_to(app.current_slide = 1);
-		$(".js-slider").css( "top", "0px" );
-		$(".js-title").css( "opacity", "0" );
+		location.reload();
+		console.log('to top');
 });
 
 // results
