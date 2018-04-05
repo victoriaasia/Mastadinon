@@ -115,6 +115,7 @@ body
 		@include bp-mob
 			height: auto
 			padding-bottom: 40%
+			min-height: 320px
 	&-first
 		background: url("../img/test1.jpg") no-repeat
 		.m-answer + .m-answer-btn
@@ -143,6 +144,8 @@ body
 			@include bp-table
 				background-size: 48%
 				background-position: bottom
+			@include bp-mob
+				background-size: 40%
 		@include bp-table
 			background: url("../img/mob/test2.jpg") no-repeat
 			position: relative
@@ -153,13 +156,16 @@ body
 				left: -30px
 				bottom: 40px
 				@include bp-mob
-					width: 45%
+					bottom: 15%
+					width: 185px
 			&::after
 				background: url("../img/mob/test2img2.png") no-repeat
 				width: 140px
 				height: 45%
 				right: -25px
 				bottom: 30px
+				@include bp-mob
+					bottom: 10%
 			&::before, &::after
 				position: absolute
 				content: ''
@@ -196,6 +202,7 @@ body
 				@include bp-mob
 					width: 160px
 					height: 240px
+					left: -3vw
 			&::after
 				background: url("../img/mob/test4img2.png") no-repeat
 				width: 130px
