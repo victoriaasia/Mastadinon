@@ -1,7 +1,5 @@
 $(document).ready(function(){
 	app.init();
-	// var blockAnswers = $(".m-down").parent();
-	// blockAnswers.find(".m-answer").change(function () {$(".m-down").prop("disabled", false);});
 });
 
 var app = app || {
