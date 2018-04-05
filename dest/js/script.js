@@ -40,7 +40,9 @@ var app = app || {
 
 				app.current_slide++;
 				app.slide_to(app.current_slide);
-				$(".js-title").css( "opacity", "1" );
+				$(".js-title").css({"opacity":"1", "width":"auto" });
+				$(".js-logo-brand").css("max-width","30vw" );
+				$(".js-logo").css("max-width","22vw" );
 			}
 		});
 

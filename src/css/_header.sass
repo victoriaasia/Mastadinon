@@ -17,14 +17,16 @@
 .m-logo-brand
   img
     max-width: 220px
+    transition: width 0.5s ease
     @include bp-table
-      max-width: 28vw
+      max-width: 170px
 .m-logo-woman
   text-align: right
   img
     max-width: 160px
+    transition: width 0.5s ease
     @include bp-table
-      max-width: 20vw
+      max-width: 135px
 
 .m-title
   flex: 2
@@ -39,6 +41,7 @@
   @include bp-table
     font-size: 36px
     line-height: 0.7
+    width: 0px
   @include bp-mob
     font-size: 30px
   span
