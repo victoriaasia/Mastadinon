@@ -44,6 +44,7 @@ body
 .m-wrapper, .m-wrapper form, .m-result-wrapper
 	width: 100%
 	height: 100%
+	position: absolute
 	a
 		outline: 0
 		text-decoration: none
@@ -90,16 +91,6 @@ body
 		max-width: 100%
 		width: 100%
 		height: 100%
-	&-result
-		position: absolute
-		top: 105px
-		left: 0
-		width: 100%
-		height: calc(100% - 105px)
-		overflow: hidden
-		@include bp-table
-			top: 90px
-			height: calc(100% - 90px)
 	&__question
 		width: 790px
 		height: auto
@@ -353,6 +344,7 @@ body
 		flex: 1 1 40%
 		max-width: 45%
 		margin: 10px
+		position: relative
 		@include bp-table
 			margin: 5px
 	&__btn
@@ -388,7 +380,8 @@ body
 
 
 .m-answer
-	display: none
+	position: absolute
+	opacity: 0
 	+ .m-answer-btn
 		width: 100%
 		height: 95px

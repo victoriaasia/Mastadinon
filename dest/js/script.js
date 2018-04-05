@@ -47,13 +47,34 @@ var app = app || {
 		});
 
 		// Try again
-		// $(".js-repeat").on("click", function(){
-		// 		app.slide_to(app.current_slide = 1);
-		// 		$(".js-title").css( "opacity", "0" );
-		// });
+		$(".js-repeat").on("click", function(){
+				app.slide_to(app.current_slide = 1);
+				$(".js-title").css( "opacity", "0" );
+		});
 	}
-}
+};
 
+$(".js-result-btn").click(function () {
+	$('.js-wrapper').addClass('m-result-wrapper');
+	var chk1 = $('#m-form').find('.m-answer1:checked').length;
+	var chk2 = $('#m-form').find('.m-answer2:checked').length;
+	var chk3 = $('#m-form').find('.m-answer3:checked').length;
+	var chk4 = $('#m-form').find('.m-answer4:checked').length;
+
+	if(chk1 > chk2 && chk1 > chk3 && chk1 > chk4) {
+		$(".js-result").load("results/resul1.html");
+		$(".js-social").attr("data-url", "http://pms.woman.ru/share/1/");
+	} else if (chk2 > chk1 && chk2 > chk3 && chk2 > chk4) {
+		$(".js-result").load("results/resul2.html");
+		$(".js-social").attr("data-url", "http://pms.woman.ru/share/2/");
+	} else if (chk3 > chk1 && chk3 > chk2 && chk3 > chk4) {
+		$(".js-result").load("results/resul3.html");
+		$(".js-social").attr("data-url", "http://pms.woman.ru/share/3/");
+	} else {
+		$(".js-result").load("results/resul4.html");
+		$(".js-social").attr("data-url", "http://pms.woman.ru/share/4/");
+	}
+});
 
 const people = introContainer.querySelector(".js-people"),
 			woman = introContainer.querySelector(".js-woman"),
