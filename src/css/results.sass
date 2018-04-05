@@ -1,6 +1,12 @@
 @import "colors"
 @import "mixins"
 
+.m-result-wrapper
+  @include bp-table
+    .m-social
+      display: none
+
+
 .m-result
   width: 100%
   height: 100%
@@ -23,13 +29,13 @@
         background: url("../img/mob/result1img.png") no-repeat
         background-size: contain
         bottom: 15%
-        left: 3vw
+        left: -5vw
         width: 150px
         height: 240px
         z-index: 9999
         @include bp-mob
           bottom: 13%
-          left: 1vw
+          left: -3vw
           width: 110px
           height: 180px
   &-second
@@ -42,11 +48,16 @@
         content: ''
         background: url("../img/mob/result2img.png") no-repeat
         background-size: contain
-        left: 12px
-        bottom: 80px
-        width: 70px
-        height: 295px
-        z-index: 999
+        bottom: 15%
+        left: 10px
+        width: 100px
+        height: 240px
+        z-index: 9999
+        @include bp-mob
+          bottom: 13%
+          left: 1vw
+          width: 85px
+          height: 220px
   &-third
     background: url("../img/result3.jpg") no-repeat
     @include bp-table
@@ -62,6 +73,8 @@
         width: 95px
         height: 240px
         z-index: 999
+        @include bp-mob
+          bottom: 10%
   &-fourth
     background: url("../img/result4.jpg") no-repeat
     @include bp-table
@@ -74,22 +87,24 @@
         background-size: contain !important
       &::before
         background: url("../img/mob/result4img1.png") no-repeat
-        left: -105px
-        bottom: 16vw
+        left: -150px
+        bottom: 15%
         width: 285px
         height: 260px
         @include bp-mob
-          left: -100px
+          left: -130px
+          bottom: 10%
           width: 250px
           height: 230px
       &::after
         background: url("../img/mob/result4img2.png") no-repeat
-        right: 13%
-        bottom: 16vw
+        right: 65px
+        bottom: 15%
         width: 120px
         height: 190px
         @include bp-mob
-          right: 8vw
+          right: 50px
+          bottom: 10%
           width: 100px
           height: 160px
 
@@ -111,7 +126,7 @@
     @include bp-mob
       height: auto
   &__title
-    font-size: 40px
+    font-size: 36px
     font-family: "Georgia"
     color: $green
     font-weight: bold
@@ -122,9 +137,9 @@
       font-size: 30px
     @include bp-mob
       font-size: 16px
-      padding: 3vw
+      padding: 3vw 3vw 1vw
   &__subtitle
-    font-size: 36px
+    font-size: 32px
     font-family: "mpb", Arial, sans-serif
     color: $blue
     font-weight: bold
@@ -137,16 +152,16 @@
     @include bp-mob
       font-size: 16px
   &__text
-    font-size: 18px
+    font-size: 14px
     font-family: "mpr"
     line-height: 1.167
     text-align: center
     padding: 10px 25px
     @include bp-table
-      font-size: 13px
+      font-size: 2vw
       padding: 10px 15px
     @include bp-mob
-      font-size: 12px
+      font-size: 2.5vw
       padding: 3vw
     .au
       font-size: 14px
@@ -155,7 +170,7 @@
         margin-top: 3vw
         font-size: 9px
       @include bp-mob
-        font-size: 2.5vw
+        font-size: 2vw
         margin-top: 1vw
   &__footer
     display: flex
@@ -171,35 +186,39 @@
         font-size: 16px
         @include bp-mob
           font-size: 3vw
-  &__info
-    padding: 0 10px
-    display: flex
-    flex-direction: column
-    justify-content: flex-end
-    flex-grow: 2
-    @include bp-table
-      display: none !important
-    p
-      font-family: "mpr"
-      color: $verylight
-      line-height: 1.2
-    img
-      width: 100%
 
 .m-disclaimer
-  position: absolute
-  bottom: 0
-  left: 0
-  width: 100%
-  height: auto
-  padding: 3px
-  background: $darkpale
-  display: none
+  padding: 0 10px
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  flex-grow: 2
   @include bp-table
-    display: block
+    display: none !important
   p
     font-family: "mpr"
     color: $verylight
     line-height: 1.2
+    font-size: 12px
   img
-    max-width: 100%
+    width: 100%
+  &-m
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: auto
+    padding: 3px 2vw
+    background: $darkpale
+    display: none
+    @include bp-table
+      display: block
+    @include bp-mob
+      height: 40px
+    p
+      font-family: "mpr"
+      color: $verylight
+      line-height: 1.2
+      font-size: 9px
+    img
+      width: 100%

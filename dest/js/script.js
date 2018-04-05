@@ -47,10 +47,10 @@ var app = app || {
 		});
 
 		// Try again
-		$(".up").on("click", function(){
-				app.slide_to(app.current_slide = 1);
-				$(".js-title").css( "opacity", "0" );
-		});
+		// $(".js-repeat").on("click", function(){
+		// 		app.slide_to(app.current_slide = 1);
+		// 		$(".js-title").css( "opacity", "0" );
+		// });
 	}
 }
 

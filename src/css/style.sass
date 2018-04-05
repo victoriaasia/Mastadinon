@@ -41,17 +41,19 @@ body
 .m-img
 	max-width: 90%
 
-.m-wrapper, .m-wrapper form
+.m-wrapper, .m-wrapper form, .m-result-wrapper
 	width: 100%
 	height: 100%
 	a
 		outline: 0
 		text-decoration: none
 
-.m-wrapper ::-moz-selection
+.m-wrapper ::-moz-selection,
+.m-result-wrapper ::-moz-selection
   background: $darkpale
   color: $light
-.m-wrapper ::selection
+.m-wrapper ::selection,
+.m-result-wrapper ::selection
   background: $darkpale
   color: $light
 
@@ -62,8 +64,6 @@ body
 	left: 0
 	width: 100%
 	height: calc(100% - 105px)
-	// +size(100%)
-	/* border: 1px solid red */
 	overflow: hidden
 	@include bp-table
 		top: 90px
@@ -90,6 +90,16 @@ body
 		max-width: 100%
 		width: 100%
 		height: 100%
+	&-result
+		position: absolute
+		top: 105px
+		left: 0
+		width: 100%
+		height: calc(100% - 105px)
+		overflow: hidden
+		@include bp-table
+			top: 90px
+			height: calc(100% - 90px)
 	&__question
 		width: 790px
 		height: auto
@@ -102,8 +112,9 @@ body
 		@include bp-table
 			width: 80%
 			height: 90%
-			// height: auto
-			// padding-bottom: 40%
+		@include bp-mob
+			height: auto
+			padding-bottom: 40%
 	&-first
 		background: url("../img/test1.jpg") no-repeat
 		.m-answer + .m-answer-btn
@@ -183,7 +194,7 @@ body
 				left: 20px
 				bottom: 10%
 				@include bp-mob
-					width: 40%
+					width: 160px
 					height: 240px
 			&::after
 				background: url("../img/mob/test4img2.png") no-repeat
@@ -192,8 +203,8 @@ body
 				right: 5%
 				bottom: 10%
 				@include bp-mob
-					width: 40%
-					height: 200px
+					width: 105px
+					height: 180px
 			&::before, &::after
 				position: absolute
 				content: ''
@@ -353,7 +364,7 @@ body
 	border-bottom-left-radius: 50px
 	border-bottom-right-radius: 50px
 	color: #fff
-	font-size: 27px
+	font-size: 22px
 	font-family: "mpb", Arial, sans-serif
 	text-align: center
 	text-transform: uppercase
