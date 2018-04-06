@@ -55,6 +55,15 @@ var app = app || {
 	      return false;
 			}
 		});
+
+		// // Try again
+		// $(".js-repeat").on("click", function() {
+		// 		console.log('to top');
+		// 		// window.location.reload();
+		// 		app.slide_to(app.current_slide = 1);
+		// 		$(".js-title").css( "opacity", "0" );
+		// });
+
 	}
 };
 
@@ -76,13 +85,6 @@ $(".js-result-btn").click(function () {
 	} else {
 		$(".js-result").load("results/result4.html");
 	}
-
-	// Try again
-	$(".js-repeat").on("click", function() {
-			console.log('to top');
-			window.location.reload();
-	});
-
 });
 
 // front page
