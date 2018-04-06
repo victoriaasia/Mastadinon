@@ -65,14 +65,6 @@ var app = app || {
 };
 
 
-// Try again
-$(".js-repeat").on("click", function() {
-		console.log('to top');
-		window.location.reload();
-});
-
-
-
 // results
 $(".js-result-btn").click(function () {
 	$('.js-wrapper').addClass('m-result-wrapper');
@@ -90,6 +82,13 @@ $(".js-result-btn").click(function () {
 	} else {
 		$(".js-result").load("results/result4.html");
 	}
+
+	// Try again
+	$(".js-repeat").on("click", function() {
+			console.log('to top');
+			window.location.reload();
+	});
+
 });
 
 // front page
