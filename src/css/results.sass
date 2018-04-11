@@ -145,43 +145,40 @@
     font-weight: bold
     text-transform: uppercase
     text-align: center
-    padding: 0 10px 20px
+    padding: 0 10px 5px
     @include bp-table
       font-size: 25px
-      padding: 0 10px 1vw
+      padding: 0 10px
     @include bp-mob
       font-size: 16px
   &__text
     font-size: 14px
     font-family: "mpr"
     line-height: 1.167
-    text-align: center
-    padding: 10px 25px
+    padding: 10px 5vw
+    p
+      margin: 5px 0
     @include bp-table
       font-size: 2vw
-      padding: 5px 15px
     @include bp-mob
       font-size: 2.5vw
       padding: 1vw 3vw
     .au
-      font-size: 14px
-      margin-top: 10px
+      font-size: 9px
       @include bp-table
-        margin-top: 3vw
-        font-size: 9px
-      @include bp-mob
-        font-size: 2vw
-        margin-top: 1vw
+        font-size: 7px
   &__footer
     display: flex
     justify-content: space-between
     align-items: center
     padding: 10px 5vw
+    .m-question__btn
+      padding-top: 0px
     @include bp-table
       flex-direction: column
       justify-content: flex-end
       flex-grow: 1
-      padding: 10px 10px 5vw
+      padding: 10px
       .m-btn
         font-size: 16px
         @include bp-mob

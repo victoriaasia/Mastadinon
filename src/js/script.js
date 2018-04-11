@@ -118,6 +118,6 @@ document.body.addEventListener("mousemove", function(e) {
   if (Math.abs(distX) < 800 && distY < 300 && fluidpeople.matches) {
 		people.style.transform = "translate("+(-1*distX)/12+"px,"+(-1*distY)/12+"px)";
 		woman.style.transform = "translate("+(-1*distX)/-12+"px,"+(-1*distY)/-12+"px)";
-		introContainer.style.backgroundPosition = `calc(87% + ${distX/50}px) calc(87% + ${distY/50}px)`;
+		// introContainer.style.backgroundPosition = `calc(87% + ${distX/50}px) calc(87% + ${distY/50}px)`;
   }
 });
