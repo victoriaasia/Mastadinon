@@ -61,15 +61,6 @@ var app = app || {
 	      return false;
 			}
 		});
-
-		// // Try again
-		// $(".js-repeat").on("click", function() {
-		// 		console.log('to top');
-		// 		// window.location.reload();
-		// 		app.slide_to(app.current_slide = 1);
-		// 		$(".js-title").css( "opacity", "0" );
-		// });
-
 	}
 };
 
@@ -127,3 +118,40 @@ document.body.addEventListener("mousemove", function(e) {
 		// introContainer.style.backgroundPosition = `calc(87% + ${distX/50}px) calc(87% + ${distY/50}px)`;
   }
 });
+
+
+// question pics
+function changePic1(box){
+	var pics = new Array(4)
+	pics[1] = "img/quest/1/1.jpg";
+	pics[2] = "img/quest/1/3.jpg";
+	pics[3] = "img/quest/1/2.jpg";
+	pics[4] = "img/quest/1/4.jpg";
+	document.querySelector('.changepic1').src = pics[parseInt(box.value)];
+}
+function changePic2(box){
+	var pics = new Array(4)
+	pics[5] = "img/quest/2/5.png";
+	pics[6] = "img/quest/2/6.png";
+	pics[7] = "img/quest/2/7.png";
+	pics[8] = "img/quest/2/8.png";
+	document.querySelector('.changepic2').src = pics[parseInt(box.value)];
+}
+
+function changePic3(box){
+	var pics = new Array(4)
+	pics[9] = "img/quest/3/9.jpg";
+	pics[10] = "img/quest/3/10.jpg";
+	pics[11] = "img/quest/3/11.jpg";
+	pics[12] = "img/quest/3/12.jpg";
+	document.querySelector('.changepic3').src = pics[parseInt(box.value)];
+}
+
+function changePic6(box){
+	var pics = new Array(4)
+	pics[21] = "img/quest/6/21.jpg";
+	pics[22] = "img/quest/6/22.jpg";
+	pics[23] = "img/quest/6/23.jpg";
+	pics[24] = "img/quest/6/24.jpg";
+	document.querySelector('.changepic6').src = pics[parseInt(box.value)];
+}
