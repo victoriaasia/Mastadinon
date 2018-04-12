@@ -39,7 +39,7 @@ gulp.task('sass', function() {
 
 gulp.task('img', function() {
   return gulp.src(['src/img/*.*', 'src/img/**/*.*'])
-    .pipe(image())
+    // .pipe(image())
     .pipe(gulp.dest('dest/img'))
 });
 
