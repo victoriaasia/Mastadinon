@@ -131,7 +131,6 @@ function changePic2(box){
 	pics[8] = "img/quest/2/8.png";
 	document.querySelector('.changepic2').src = pics[parseInt(box.value)];
 }
-
 function changePic3(box){
 	var pics = new Array(4)
 	pics[9] = "img/quest/3/9.jpg";
@@ -140,7 +139,22 @@ function changePic3(box){
 	pics[12] = "img/quest/3/12.jpg";
 	document.querySelector('.changepic3').src = pics[parseInt(box.value)];
 }
-
+function changePic4(box){
+	var pics = new Array(4)
+	pics[13] = "img/quest/4/13.png";
+	pics[14] = "img/quest/4/14.png";
+	pics[15] = "img/quest/4/15.jpg";
+	pics[16] = "img/quest/4/16.png";
+	document.querySelector('.changepic4').src = pics[parseInt(box.value)];
+}
+function changePic5(box){
+	var pics = new Array(4)
+	pics[17] = "img/quest/5/17.png";
+	pics[18] = "img/quest/5/18.jpg";
+	pics[19] = "img/quest/5/19.png";
+	pics[20] = "img/quest/5/20.png";
+	document.querySelector('.changepic5').src = pics[parseInt(box.value)];
+}
 function changePic6(box){
 	var pics = new Array(4)
 	pics[21] = "img/quest/6/21.jpg";
@@ -148,4 +162,12 @@ function changePic6(box){
 	pics[23] = "img/quest/6/23.jpg";
 	pics[24] = "img/quest/6/24.jpg";
 	document.querySelector('.changepic6').src = pics[parseInt(box.value)];
+}
+function changePic7(box){
+	var pics = new Array(4)
+	pics[25] = "img/quest/7/25.png";
+	pics[26] = "img/quest/7/26.png";
+	pics[27] = "img/quest/7/27.jpg";
+	pics[28] = "img/quest/7/28.png";
+	document.querySelector('.changepic7').src = pics[parseInt(box.value)];
 }

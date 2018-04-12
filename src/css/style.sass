@@ -120,12 +120,6 @@ body
 				font-size: 6vw
 	&-second
 		background: url("../img/test2.jpg") no-repeat
-		.m-question__img img
-			left: 0%
-			top: auto
-			bottom: 0%
-			width: 320px
-			transform: translate(0%)
 		@include bp-table
 			background: url("../img/mob/test2.jpg") no-repeat
 			position: relative
@@ -152,18 +146,27 @@ body
 				content: ''
 				background-size: contain !important
 				z-index: 99
+		.m-question__img img
+			left: 0%
+			top: auto
+			bottom: 0%
+			width: 320px
+			transform: translate(0%)
+			@include bp-table
+				left: 50%
+				top: 50%
+				width: 150px
+				transform: translate(-50%, -50%)
+			@include bp-mob
+				top: 10px
+				width: 35vw
+				transform: translateX(-50%)
 	&-third
 		background: url("../img/test3.jpg") no-repeat
 		@include bp-table
 			background: url("../img/mob/test3.jpg") no-repeat
 	&-fourth
 		background: url("../img/test4.jpg") no-repeat
-		&__img
-			background: url('../img/test4img.jpg') no-repeat
-			background-size: 170px
-			background-position: 15% 80%
-			@include bp-table
-				display: none
 		@include bp-table
 			background: url("../img/mob/test4.jpg") no-repeat
 			position: relative
@@ -192,15 +195,17 @@ body
 				content: ''
 				background-size: contain !important
 				z-index: 99
+		.m-question__img img
+			width: auto
+			height: 240px
+			@include bp-table
+				width: auto
+				height: 150px
+			@include bp-mob
+				width: auto
+				height: 120px
 	&-fifth
 		background: url("../img/test5.jpg") no-repeat
-		&__img
-			background: url('../img/test5img.jpg') no-repeat
-			background-size: 200px
-			background-position: 10% 60%
-			@include bp-table
-				background-size: 50%
-				background-position: 50% 95%
 		@include bp-table
 			background: url("../img/mob/test5.jpg") no-repeat
 			position: relative
@@ -219,13 +224,6 @@ body
 					height: 200px
 	&-sixth
 		background: url("../img/test6.jpg") no-repeat
-		&__img
-			background: url('../img/test6img.jpg') no-repeat
-			background-size: 230px
-			background-position: 10% 65%
-			@include bp-table
-				background-size: 45%
-				background-position: 50% 97%
 		@include bp-table
 			background: url("../img/mob/test6.jpg") no-repeat
 			position: relative
@@ -244,13 +242,6 @@ body
 					height: 210px
 	&-seventh
 		background: url("../img/test7.jpg") no-repeat
-		&__img
-			background: url('../img/test7img.jpg') no-repeat
-			background-size: 245px
-			background-position: 7% 70%
-			@include bp-table
-				background-size: 40%
-				background-position: 50% 97%
 		@include bp-table
 			background: url("../img/mob/test7.jpg") no-repeat
 			position: relative
@@ -300,7 +291,7 @@ body
 		padding: 45px 45px 0 200px
 		@include bp-table
 			padding: 25px 15px 10px 100px
-			font-size: 26px
+			font-size: 24px
 		@include bp-mob
 			padding: 10px 10px 25px 100px
 			font-size: 4.5vw
