@@ -1,10 +1,6 @@
 .m-social
-  position: absolute
-  bottom: 0
-  left: 0
   display: flex
-  padding: 15px
-  z-index: 99999
+  padding: 5px 15px
   @include bp-table
     padding: 7px 5px
   &-icon
@@ -67,3 +63,11 @@
         margin-right: 0
       &:hover
         background: rgba($green, 0.7)
+
+.m-close
+  position: absolute
+  right: 5px
+  top: 5px
+  color: $light
+  font-size: 16px
+  cursor: pointer

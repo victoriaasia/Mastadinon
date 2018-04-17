@@ -177,3 +177,8 @@ function changePic7(box){
 	pics[28] = "img/quest/7/28.png";
 	document.querySelector('.changepic7').src = pics[parseInt(box.value)];
 }
+
+// close discl
+$('.js-close').on("click", function(){
+	$(this).parent().css("display", "none");
+})
